@@ -9,13 +9,15 @@ import android.widget.Button;
 
 public class SoundBoardLeo extends AppCompatActivity {
 
-    private Button btnBurke, btnCrickets, btnDarren, btnDoorbell, btnDuck, btnGong, btnPunch, btnPunch2, btnShatter, btnSpring, btnToy;
+    private Button btnBurke, btnCrickets, btnDarren, btnDoorbell, btnDuck, btnFabrizio, btnGong, btnPunch, btnPunch2, btnShatter, btnSpring, btnToy;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soundboard_leo);
 
         btnBurke = findViewById(R.id.btn_burke);
+        btnFabrizio = findViewById(R.id.btn_fabrizio);
         btnCrickets = findViewById(R.id.btn_cricket);
         btnDarren = findViewById(R.id.btn_darren);
         btnDoorbell = findViewById(R.id.btn_doorbell);
@@ -34,15 +36,89 @@ public class SoundBoardLeo extends AppCompatActivity {
             }
         });
 
+        btnCrickets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playCrickets();
+            }
+        });
 
+        btnDarren.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playDarren();
+            }
+        });
+
+        btnDoorbell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playDoorbell();
+            }
+        });
+
+        btnDuck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playDuck();
+            }
+        });
+
+        btnGong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playGong();
+            }
+        });
+
+        btnPunch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playPunch();
+            }
+        });
+
+        btnPunch2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playPunch2();
+            }
+        });
+
+        btnShatter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playShatter();
+            }
+        });
+
+        btnSpring.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playSpring();
+            }
+        });
+
+        btnToy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playToy();
+            }
+        });
+
+        btnFabrizio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playFabrizio();
+            }
+        });
 
 
     }
 
 
-
-    private void playBurke(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_burke);
+    private void playBurke() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_burke);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -54,8 +130,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playCrickets(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_crickets);
+    private void playCrickets() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_crickets);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -67,8 +143,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playDarren(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_darren);
+    private void playDarren() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_darren);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -80,8 +156,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playDoorbell(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_doorbell);
+    private void playDoorbell() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_doorbell);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -93,8 +169,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playDuck(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_duck);
+    private void playDuck() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_duck);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -106,8 +182,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playGong(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_gong);
+    private void playGong() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_gong);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -119,8 +195,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playPunch(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_punch);
+    private void playPunch() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_punch);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -132,8 +208,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playPunch2(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_punch2);
+    private void playPunch2() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_punch2);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -145,8 +221,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playShatter(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_shatter);
+    private void playShatter() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_shatter);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -158,8 +234,8 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playSpring(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_spring);
+    private void playSpring() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_spring);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -171,8 +247,21 @@ public class SoundBoardLeo extends AppCompatActivity {
         });
     }
 
-    private void playToy(){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.sample_leo_toy);
+    private void playToy() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_toy);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.stop();
+                mp.release();
+                mp = null;
+            }
+        });
+    }
+
+    private void playFabrizio() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.sample_leo_fabrizio);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
